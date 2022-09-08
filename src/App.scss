@@ -15,8 +15,27 @@
   background-color: $color-black;
   border-radius: 25px;
   box-shadow: 16px 16px 16px 7px rgb(0 0 0 / 30%), 5px 15px 20px 7px rgb(132 125 125 / 19%);
+
+  .counterCard {
+    text-align: center;
+  
+    &__heading {
+      color: $color-white;
+      font-display: $font-family; //???Why not working?
+      font-size: 1.25em;
+    }
+    
+  }
+
+
+
+
+
+
 }
 }
+
+
 
 
 
