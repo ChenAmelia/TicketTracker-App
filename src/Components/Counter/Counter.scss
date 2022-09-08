@@ -1,0 +1,22 @@
+@use "../../assets/sass/_variables" as *;
+
+.counter {
+    margin: 20px;
+    display:flex;
+    justify-content: space-evenly;
+    color: $color-white;
+
+    &__calculate {
+        color: $color-white;
+        background-color: $color-black;
+        border-radius: 5px;font-size: 1.25em;
+        font-weight: bolder;
+    }
+
+    &__number {
+        font-weight: bolder;
+        font-size: 1.25em;
+    }
+
+    
+}

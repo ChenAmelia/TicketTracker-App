@@ -1,0 +1,26 @@
+@use "../../assets/sass/_variables.scss" as *;
+
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  padding-top: 20px;
+  color: $color-black;
+
+  &__heading {
+    font-family: $font-family;
+    font-size: 2.5em;
+
+  }
+
+  &__item {
+    height: 30px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .nav {
+    grid-column: 1 / -1;
+  }
+}

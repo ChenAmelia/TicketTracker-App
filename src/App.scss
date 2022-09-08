@@ -1,0 +1,43 @@
+@use "./assets/sass/variables.scss" as *;
+
+.app {
+  background-color: rgb(120,160,154);
+  background-color: radial-gradient(circle, rgba(120,160,154,1) 5%, rgba(166,220,212,1) 61%);
+  height:756px;
+
+  .container {
+  display: block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 300px; //min-content
+  width: 85%;
+  background-color: $color-black;
+  border-radius: 25px;
+  box-shadow: 16px 16px 16px 7px rgb(0 0 0 / 30%), 5px 15px 20px 7px rgb(132 125 125 / 19%);
+}
+}
+
+
+
+@media screen and (min-width: 992px) {
+  .app {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, min-content);
+
+    .greeting {
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &__img {
+        height: 100px;
+      }
+    }
+  }
+}
