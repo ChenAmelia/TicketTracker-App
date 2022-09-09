@@ -10,24 +10,35 @@ const [counter, setCounter] = useState(0);
     setCounter(counter + 1);
   };
   const decrementCount = () => {
-    setCounter(counter - 1);
+    if (counter === 0) {
+        counter = 0;
+    } else {
+        setCounter(counter - 1);
+    }
+    
   };
 
 
   return (
-    <div className="counter">
+        <div className="counterCard">
 
-        <div onClick={decrementCount}>
-          <button className="counter__calculate">-</button>
+              <p className="counterCard__heading">Customer</p>
+
+            <div className="counterCard__counter">
+
+              <div onClick={decrementCount}>
+               <button className="counterCard__counter--calculate">-</button>
+              </div>
+
+              <span className="counterCard__counter--number">{counter}</span>
+
+              <div onClick={incrementCount}>
+                <button className="counterCard__counter--calculate">+</button>
+              </div>
+
+            
+            </div>
         </div>
-
-        <span className="counter__number">{counter}</span>
-
-        <div onClick={incrementCount}>
-          <button className="counter__calculate">+</button>
-        </div>
-
-    </div>
   );
 };
 

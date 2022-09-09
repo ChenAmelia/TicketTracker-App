@@ -1,0 +1,29 @@
+@use "../../assets/sass/_variables.scss" as *;
+
+.teamInfo {
+    display:flex;
+    flex-direction: column;
+    padding:5px;
+
+    //设置姓名的文字格式
+ 
+    &__name {
+        color:$primary-color;
+        font-display: $font-family;
+        font-size:0.9em;
+        margin: 5px 0px 5px 3px;
+    }
+
+    //设置职位的文字格式
+
+    &__role {
+        color:$primary-color;
+        font-display: $font-family;
+        font-size:0.5em;
+        margin: 5px 0px 10px 3px;
+
+    }
+
+
+   
+}

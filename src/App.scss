@@ -1,36 +1,25 @@
-@use "./assets/sass/variables.scss" as *;
+@use "./assets/sass/_variables.scss" as *;
 
 .app {
   background-color: rgb(120,160,154);
   background-color: radial-gradient(circle, rgba(120,160,154,1) 5%, rgba(166,220,212,1) 61%);
-  height:756px;
+  height:1000px;
 
   .container {
   display: block;
-  margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 300px; //min-content
-  width: 85%;
+  margin: 10px auto 20px auto;
+  height: min-content;
+  width: 90%;
   background-color: $color-black;
-  border-radius: 25px;
+  border-radius: 20px;
   box-shadow: 16px 16px 16px 7px rgb(0 0 0 / 30%), 5px 15px 20px 7px rgb(132 125 125 / 19%);
 
-  .counterCard {
-    text-align: center;
-  
-    &__heading {
-      color: $color-white;
-      font-display: $font-family; //???Why not working?
-      font-size: 1.25em;
-    }
-    
+  &__cardList {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
   }
-
-
-
-
-
 
 }
 }
@@ -43,20 +32,17 @@
   .app {
     max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    gap: 50px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, min-content);
+ 
 
-    .greeting {
-      text-align: left;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .container {
+      width: 1000px;
 
-      &__img {
-        height: 100px;
+      &__cardList {
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
+      
     }
   }
 }

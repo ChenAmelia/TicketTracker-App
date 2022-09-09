@@ -1,20 +1,28 @@
 import "./App.scss";
 import Nav from "./Components/Nav/Nav";
 import Counter from "./Components/Counter/Counter";
-//import CounterCard from "./Components/CounterCard/CounterCard";
+import TeamInfo from "./Components/TeamInfo/TeamInfo";
+import FinalCard from "./Components/FinalCard/FinalCard";
+import team from './assets/data/team.js';
 
 
 const App = () => {
+
+  //map function
+
+  const cardsList = team.map((employee) => {
+    return (
+      <FinalCard key={employee.id} name = {employee.name} role = {employee.role}/>
+    )
+  })
 
   return (
     <div className="app">
       <Nav />
 
       <div className="container">
-
-        <div className="counterCard">
-          <heading className="counterCard__heading">Customer</heading>
-          <Counter />
+        <div className="container__cardList">
+          {cardsList}
         </div>
 
         

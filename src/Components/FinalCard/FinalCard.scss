@@ -1,0 +1,19 @@
+@use "../../assets/sass/_variables.scss" as *;
+
+//设置整个小框的格式
+.finalCard {
+    width: 130px;
+    border: 1px solid $primary-color;
+    border-radius: 7px;
+    box-shadow: inset 0px -1px 10px 1px rgb(191 235 238), inset 0px 1px 4px 0px rgb(191 235 238);
+    margin: 30px 15px;
+}
+
+@media screen and (min-width: 992px) {
+    .finalCard {
+        width:150px;
+    }
+    
+    
+  }
+  

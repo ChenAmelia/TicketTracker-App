@@ -1,23 +1,57 @@
-@use "../../assets/sass/_variables" as *;
+@use "../../assets/sass/variables.scss" as *;
 
-.counter {
-    margin: 20px;
+.counterCard {
+
+    //设置计算器包括customer标题在内的卡的格式
+
     display:flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 0px;
+    margin: 5px;
     color: $color-white;
-    margin-top: 6px;
-
-    &__calculate {
+    align-items: center;
+    
+//设置customer格式
+    &__heading {
         color: $color-white;
-        background-color: $color-black;
-        border-radius: 5px;font-size: 1.25em;
-        font-weight: bolder;
+        font-display: $font-family; //???Why not working?
+        font-size: 0.7em;
+        font-weight: bold;
+        padding: 0px;
+        margin: 0px;
+        margin-bottom: 5px;
+    }
+//设置加减号和数字的那个框的格式
+    &__counter {
+        display: flex;
+        margin: 5px;
+        color: $color-white;
+
+        //设置加减号格式
+
+        .counterCard__counter--calculate {
+            color: $color-white;
+            background-color: $color-black;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: bolder;
+            margin: 22px 10px 2px 10px;
+
+        }
+
+        //设置数字格式
+        .counterCard__counter--number {
+            font-weight:bold;
+            font-size: 0.8em;
+        }
+
+
+
+
     }
 
-    &__number {
-        font-weight: bolder;
-        font-size: 1.25em;
-    }
+
+}
+
 
     
-}
